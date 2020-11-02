@@ -4,9 +4,10 @@ class TweetsController < ApplicationController
     # if params[:username] == "" || params[:email] == "" || params[:password] == ""
     #   redirect '/failure'
     # else
-      @user = User.create(:username => params[:username], :email => params[:email], :password => params[:password])
-      redirect '/tweets/index'
+    #   @user = User.create(:username => params[:username], :email => params[:email], :password => params[:password])
+    #   redirect '/tweets'
     # end
+    redirect '/tweets/index'
   end
 
 end
