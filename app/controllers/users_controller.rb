@@ -32,7 +32,7 @@ class UsersController < ApplicationController
   end
 
   get '/logout' do
-    session[:user_id].clear
+    session.clear
     redirect '/'
   end
 
