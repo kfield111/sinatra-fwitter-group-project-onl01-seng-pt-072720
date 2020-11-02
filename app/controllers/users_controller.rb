@@ -24,7 +24,7 @@ class UsersController < ApplicationController
   end
 
   post  '/login'  do
-    erb :'/tweets'
+    redirect '/tweets'
   end
 
 end
