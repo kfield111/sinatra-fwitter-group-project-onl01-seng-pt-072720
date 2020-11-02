@@ -32,6 +32,10 @@ class ApplicationController < Sinatra::Base
   end
 
 
+  get '/login' do
+    erb :login
+  end
+
   helpers do
     def current_user
       User.find(session[:user_id])
