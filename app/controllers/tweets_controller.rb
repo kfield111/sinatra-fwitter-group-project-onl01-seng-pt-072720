@@ -9,6 +9,8 @@ class TweetsController < ApplicationController
     user = User.new(:username => params[:username], :email => params[:email], :password => params[:password])
     if user.save && user.username != "" && user.email != ""
       redirect '/tweets'
+    else
+      redirect '/signup'
     end
   end
 
