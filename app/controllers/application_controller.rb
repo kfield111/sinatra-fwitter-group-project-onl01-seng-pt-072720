@@ -10,7 +10,8 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/' do
-    erb :homepage
+    @user = current_user if is_logged_in?
+    erb :index
   end
 
 
@@ -19,7 +20,7 @@ class ApplicationController < Sinatra::Base
       @current_user ||= User.find(session[:id]) if session[:id]
     end
 
-    def logged_in?
+    def is_logged_in?
       !!session[:user_id]
     end
   end
