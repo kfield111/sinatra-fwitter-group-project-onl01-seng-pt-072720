@@ -14,10 +14,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/signup' do
-    user =  User.find_by(:username => params[:username])
-
-    if user && user.authenticate(params[:password])
-      session[:user_id] = user.id
+    if logged_in?
       redirect '/tweets'
     else
       erb :'/registration/signup'
