@@ -14,7 +14,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/signup' do
-    if logged_in?
+    if @current_user == ""
       redirect '/tweets'
     else
       erb :'/registration/signup'
@@ -38,7 +38,7 @@ class ApplicationController < Sinatra::Base
     end
 
     def logged_in?
-      !!session[:user_id]
+      !!@current_user
     end
   end
 
