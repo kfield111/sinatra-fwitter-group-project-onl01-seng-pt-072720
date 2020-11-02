@@ -22,7 +22,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/signup' do
-    if user.save && user.username != "" && user.email != ""
+    if params[:username] != "" && params[:email] != "" && params[:password] != ""
       @user = User.new(:username => params[:username], :email => params[:email], :password => params[:password])
       session[:user_id] = @user.id
       redirect '/tweets'
