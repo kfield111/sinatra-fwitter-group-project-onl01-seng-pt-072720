@@ -21,6 +21,7 @@ class UsersController < ApplicationController
 
   get '/login' do
     if logged_in?  == false
+      binding.pry
       erb :'/users/login'
     end
   end
