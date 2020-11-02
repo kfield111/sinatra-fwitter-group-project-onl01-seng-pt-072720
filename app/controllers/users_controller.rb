@@ -38,7 +38,7 @@ class UsersController < ApplicationController
 
   get '/logout' do
       session.clear
-      erb :"/users/login"
+      redirect "/login"
   end
 
 end
