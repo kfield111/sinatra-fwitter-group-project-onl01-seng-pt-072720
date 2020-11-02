@@ -2,7 +2,7 @@ class TweetsController < ApplicationController
 
   post  '/tweets'  do
     @tweets =  Tweet.all
-    redirect '/tweets/show'
+    redirect '/tweets/index'
   end
 
 end
