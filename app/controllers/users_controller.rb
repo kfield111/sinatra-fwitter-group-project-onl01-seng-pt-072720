@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     if is_logged_in?
       redirect '/tweets'
     else
-      erb :'/registration/signup'
+      erb :'/users/signup'
     end
   end
 
