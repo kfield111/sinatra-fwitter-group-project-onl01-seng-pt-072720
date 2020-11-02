@@ -9,4 +9,17 @@ class TweetsController < ApplicationController
      redirect '/login'
     end
   end
+
+  post '/tweet' do
+    if !params[:content].empty?
+      current_user.tweets << tweet
+      current_user.save
+      redirect '/tweets'
+    else
+      redirect to '/tweets/new'
+    end
+  end
+
+
+
 end
