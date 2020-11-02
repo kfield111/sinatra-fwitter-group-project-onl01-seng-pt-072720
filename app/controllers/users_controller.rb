@@ -16,6 +16,7 @@ class UsersController < ApplicationController
     else
       redirect '/signup'
     end
+    redirect to "/tweets"
   end
 
 
