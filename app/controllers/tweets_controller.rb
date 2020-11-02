@@ -1,6 +1,6 @@
 class TweetsController < ApplicationController
 
-  post '/tweets' do
+  post '/signup' do
     @tweets = Tweet.all
     redirect '/tweets/index'
   end
