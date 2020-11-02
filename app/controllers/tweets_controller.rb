@@ -8,6 +8,5 @@ class TweetsController < ApplicationController
         redirect '/users/login'
       end
     end
-  end
 
 end
