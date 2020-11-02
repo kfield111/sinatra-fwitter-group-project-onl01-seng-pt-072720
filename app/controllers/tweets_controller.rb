@@ -6,7 +6,7 @@ class TweetsController < ApplicationController
     # else
       @user = User.create(:username => params[:username], :email => params[:email], :password => params[:password])
       redirect '/tweets/index'
-    end
+    # end
   end
 
 end
