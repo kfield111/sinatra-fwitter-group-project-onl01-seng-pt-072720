@@ -5,7 +5,7 @@ class TweetsController < ApplicationController
       redirect '/failure'
     else
       @user = User.create(:username => params[:username], :email => params[:email], :password => params[:password])
-      redirect to '/tweets/index'
+      redirect '/tweets/index'
     end
   end
 
