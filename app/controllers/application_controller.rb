@@ -29,7 +29,7 @@ class ApplicationController < Sinatra::Base
     else
       redirect '/signup'
     end
-    redirect to "/tweets"
+    # redirect to "/tweets"
   end
 
 
