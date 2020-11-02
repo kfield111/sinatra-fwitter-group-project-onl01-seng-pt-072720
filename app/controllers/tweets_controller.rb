@@ -1,5 +1,10 @@
 class TweetsController < ApplicationController
 
+  get '/tweets/index' do
+    @tweets = Tweet.all
+    redirect '/tweets/index'
+  end
+
   post '/signup' do
     # if params[:username] == "" || params[:email] == "" || params[:password] == ""
     #   redirect '/failure'
