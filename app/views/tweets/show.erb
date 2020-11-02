@@ -1,5 +1,8 @@
 <h1>Welcome, </h1>
 
-<% @tweets.each do |temp| %>
-  <p><%= temp.content %><p>
-<%end%>
+<% @tweets.each do |tweet| %>
+  <h3><a href="/users/<%=tweet.user.slug%>"><%= tweet.user.username %></a> </h3>
+  <p><%= tweet.content %></p>
+  <a href="/tweets/<%=tweet.id%>">view tweet</a>
+  <br></br>
+  <% end %>
