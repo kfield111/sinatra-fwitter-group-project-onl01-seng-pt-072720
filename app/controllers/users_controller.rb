@@ -31,4 +31,8 @@ class UsersController < ApplicationController
     redirect '/tweets'
   end
 
+  get '/logout' do
+    session[:user_id].clear
+  end
+
 end
