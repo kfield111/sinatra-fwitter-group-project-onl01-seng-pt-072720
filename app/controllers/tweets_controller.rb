@@ -1,7 +1,9 @@
 class TweetsController < ApplicationController
 
   post '/signup' do
-    @tweets = Tweet.all
+    @user = User.create(params)
+    if()
+    
     redirect '/tweets'
   end
 
