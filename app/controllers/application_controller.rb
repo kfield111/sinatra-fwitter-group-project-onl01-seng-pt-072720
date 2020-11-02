@@ -33,7 +33,7 @@ class ApplicationController < Sinatra::Base
 
 
   get '/login' do
-    erb :login
+    erb '/user/login'
   end
 
   helpers do
