@@ -3,8 +3,10 @@ class TweetsController < ApplicationController
   post '/signup' do
     @user = User.create(params)
     if(@user.username == "" || @user.email == "" || @user.password == "")
-
-    redirect '/tweets'
+      redirect '/failure'
+    else
+      redirect '/tweets'
+    end
   end
 
 end
