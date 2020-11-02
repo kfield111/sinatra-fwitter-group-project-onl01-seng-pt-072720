@@ -28,7 +28,6 @@ class UsersController < ApplicationController
   end
 
   post '/login' do
-    if logged_in?
     redirect '/tweets'
   end
 
