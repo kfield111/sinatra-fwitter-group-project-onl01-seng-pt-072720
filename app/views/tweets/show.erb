@@ -1,10 +1,11 @@
-<h3><%= @tweet.user.username %></h3>
-<p><%= @tweet.content%></p>
+<h1>Welcome, <%=@user.username%></h1>
 
-<% #if @tweet.user == @user %>
-  <form method="post" action="/tweets/<%=@tweet.id%>/delete">
-    <input type="submit" value="Delete Tweet">
-  </form>
+<% @tweets.each do |tweet| %>
+  <h3><a href="/users/<%=tweet.user.slug%>"><%= tweet.user.username %></a> </h3>
+  <p><%= tweet.content %></p>
+  <a href="/tweets/<%=tweet.id%>">view tweet</a>
   <br></br>
-  <a href="/tweets/<%=@tweet.id%>/edit">Edit Tweet</a>
-<% #end %>
+  <% end %>
+  <br></br>
+  <a href="/tweets/new">New Tweet</a>
+  <a href="/logout">Log Out</a>
