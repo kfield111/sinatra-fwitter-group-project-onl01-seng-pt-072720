@@ -2,7 +2,7 @@ class TweetsController < ApplicationController
 
   get '/tweets' do
     @tweets = Tweet.all
-    erb :'/tweets/index'
+    erb :'/tweets/show'
   end
 
   post '/signup' do
